@@ -42,7 +42,7 @@
                 <StackPanel>
 
                     <Label Content="Language selection" Margin="4, 2, 4, 2" Padding="Auto"/>
-                    <ComboBox x:Name="ComboLanguage" Margin="4, 2, 4, 2">
+                    <ComboBox x:Name="ComboLanguage" Margin="4, 2, 4, 2" SelectedIndex="0">
                         
                     </ComboBox>
                 </StackPanel>
