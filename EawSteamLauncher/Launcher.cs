@@ -48,17 +48,21 @@ namespace EawSteamLauncher
                 MessageHandler.ShowWarningMessage("Please start Steam in order to the game.");
                 return;
             }
-            
+
             if (SteamHandler.IsGameRunning())
             {
                 MessageHandler.ShowWarningMessage("There is a running instance of the Game already.");
                 return;
             }
 
-            Process gameProcess = new Process();
+            Process gameProcess = new Process()
+            {
+                StartInfo =
+                {
+                    FileName = SteamHandler.SteamAppsPath + @"\common\Star Wars Empire at War\corruption\StarWarsG.exe"
+                }
+            };
 
-            gameProcess.StartInfo.FileName = SteamHandler.SteamAppsPath + @"\common\Star Wars Empire at War\corruption\StarWarsG.exe";
-            
             if (modToLaunchWith.IsWorkshopMod)
             {
                 gameProcess.StartInfo.Arguments = "LANGUAGE=ENGLISH " + $"STEAMMOD={modToLaunchWith.ModName}";
