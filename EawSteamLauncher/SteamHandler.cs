@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Text.RegularExpressions;
 
 namespace EawSteamLauncher
@@ -46,6 +47,58 @@ namespace EawSteamLauncher
             {
                 if (IsSteamInstalled())
                     return RegistryHandler.GetValue(@"Software\Valve\Steam", "SteamPath");
+
+                return null;
+            }
+        }
+
+        public static string[] InstalledLanguages
+        {
+            get
+            {
+                List<string> languageList = new List<string>();
+
+                if (Directory.Exists(SteamAppsPath + @"\common\Star Wars Empire at War\corruption\Data\Text"))
+                {
+                    string[] files = Directory.GetFiles(SteamAppsPath + @"\common\Star Wars Empire at War\corruption\Data\Text");
+
+                    foreach(string file in files)
+                    {
+                        if(file.Contains("mastertextfile"))
+                        {
+                            if(file.Contains("chinese"))
+                            {
+                                languageList.Add("Chinese");
+                            }
+                            else if (file.Contains("english"))
+                            {
+                                languageList.Add("English");
+                            }
+                            else if (file.Contains("french"))
+                            {
+                                languageList.Add("French");
+                            }
+                            else if (file.Contains("german"))
+                            {
+                                languageList.Add("German");
+                            }
+                            else if (file.Contains("italian"))
+                            {
+                                languageList.Add("Italian");
+                            }
+                            else if (file.Contains("russian"))
+                            {
+                                languageList.Add("Russian");
+                            }
+                            else if (file.Contains("spanish"))
+                            {
+                                languageList.Add("Spanish");
+                            }
+                        }
+                    }
+
+                    if (languageList != null) return languageList.ToArray();
+                }
 
                 return null;
             }
