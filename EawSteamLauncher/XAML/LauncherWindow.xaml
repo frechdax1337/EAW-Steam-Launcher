@@ -13,7 +13,5 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
-        <Button x:Name="BtnTest" Click="BtnTest_Click" Grid.Row="3"  Margin="4, 2, 4, 2">LAUNCH</Button>
     </Grid>
 </Window>
