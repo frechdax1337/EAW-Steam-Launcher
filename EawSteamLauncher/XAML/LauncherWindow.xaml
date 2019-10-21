@@ -1,0 +1,19 @@
+﻿<Window x:Class="EawSteamLauncher.LauncherWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EawSteamLauncher"
+        mc:Ignorable="d"
+        Title="LauncherWindow" Height="200" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Button x:Name="BtnTest" Click="BtnTest_Click" Grid.Row="3"  Margin="4, 2, 4, 2">LAUNCH</Button>
+    </Grid>
+</Window>
