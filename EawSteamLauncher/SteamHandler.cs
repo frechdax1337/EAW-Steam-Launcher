@@ -56,7 +56,7 @@ namespace EawSteamLauncher
         {
             get
             {
-                List<string> languageList = new List<string>();
+                var languageList = new List<string>();
 
                 if (Directory.Exists(SteamAppsPath + @"\common\Star Wars Empire at War\corruption\Data\Text"))
                 {

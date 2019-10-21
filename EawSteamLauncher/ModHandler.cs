@@ -27,7 +27,7 @@ namespace EawSteamLauncher
 
         public static Mod[] GetMods()
         {
-            List<Mod> modList = new List<Mod>();
+            var modList = new List<Mod>();
 
             if (Directory.Exists(RegistryHandler.GetValue(@"Software\Frechdax\EAW Steam Launcher", "SteamPath") + @"\common\Star Wars Empire at War\corruption\Mods"))
             {

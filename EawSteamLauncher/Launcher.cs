@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Windows;
 
 namespace EawSteamLauncher
 {
@@ -55,7 +54,7 @@ namespace EawSteamLauncher
                 return;
             }
 
-            Process gameProcess = new Process()
+            var gameProcess = new Process()
             {
                 StartInfo =
                 {
