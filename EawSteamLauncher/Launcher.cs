@@ -57,7 +57,7 @@ namespace EawSteamLauncher
 
             Process gameProcess = new Process();
 
-            gameProcess.StartInfo.FileName = SteamHandler.SteamAppsPath + @"\common\Star Wars Empire at War\GameData\StarWarsG.exe";
+            gameProcess.StartInfo.FileName = SteamHandler.SteamAppsPath + @"\common\Star Wars Empire at War\corruption\StarWarsG.exe";
             
             if (modToLaunchWith.IsWorkshopMod)
             {
