@@ -16,6 +16,7 @@ namespace EawSteamLauncher
         private void MainLauncherWindow_Loaded(object sender, RoutedEventArgs e)
         {
             Launcher.Initialize();
+            ModHandler.UpdateMods();
         }
     }
 }
