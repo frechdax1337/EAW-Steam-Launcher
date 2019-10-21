@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows;
 
 namespace EawSteamLauncher
@@ -19,6 +21,14 @@ namespace EawSteamLauncher
             ModHandler.UpdateMods();
             ControlHandler.UpdateListBoxMod();
             ControlHandler.UpdateComboLang();
+        }
+
+        private void BtnLaunch_Click(object sender, RoutedEventArgs e)
+        {
+            if (ListMod.SelectedIndex != -1 && ComboLanguage.SelectedIndex != -1)
+            {
+                Launcher.Launch(ModHandler.CurrentMods[ListMod.SelectedIndex]);
+            }
         }
     }
 }
