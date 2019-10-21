@@ -5,13 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EawSteamLauncher"
         mc:Ignorable="d"
-        Title="LauncherWindow" Height="200" Width="300">
+        Title="EAW Steam Launcher" Height="400" Width="500" ResizeMode="NoResize">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Grid.Column="0" Header="Mod selection" Margin="4, 2, 4, 4">
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <CheckBox x:Name="ChkPlayUnmodified" Content="Play without mod" Margin="4, 2, 4, 2"/>
+
+                <ListBox Grid.Row="1" Margin="4, 2, 4, 2">
+                    <ListBoxItem>Test</ListBoxItem>
+                    <ListBoxItem>Item</ListBoxItem>
+                    <ListBoxItem>Test</ListBoxItem>
+                    <ListBoxItem>Item</ListBoxItem>
+                    <ListBoxItem>Test</ListBoxItem>
+                    <ListBoxItem>Item</ListBoxItem>
+                </ListBox>
+            </Grid>
+        </GroupBox>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <GroupBox Header="Mod options" Grid.Row="0" Margin="4, 2, 4, 2">
+
+            </GroupBox>
+
+            <Button x:Name="BtnLaunch" Content ="Launch" Grid.Row="1" Margin="4, 2, 4, 4" Padding="10"/>
+        </Grid>
     </Grid>
 </Window>
