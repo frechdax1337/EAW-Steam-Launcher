@@ -35,23 +35,23 @@ namespace EawSteamLauncher
                     }
                 }
 
-                MessageBox.Show("Star Wars Empire at War: Gold Pack is not installed on this computer.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageHandler.ShowErrorMessage("Star Wars Empire at War: Gold Pack is not installed on this computer.");
             }
 
-            MessageBox.Show("Steam is not installed on this computer.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageHandler.ShowErrorMessage("Steam is not installed on this computer.");
         }
 
         public static void Launch(ModHandler.Mod modToLaunchWith)
         {
             if (!SteamHandler.IsSteamRunning())
             {
-                MessageBox.Show("Please start Steam in order to the game.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageHandler.ShowWarningMessage("Please start Steam in order to the game.");
                 return;
             }
             
             if (SteamHandler.IsGameRunning())
             {
-                MessageBox.Show("There is a running instance of the game already.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageHandler.ShowWarningMessage("There is a running instance of the Game already.");
                 return;
             }
 
