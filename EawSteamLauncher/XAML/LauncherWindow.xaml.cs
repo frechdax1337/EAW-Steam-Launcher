@@ -13,7 +13,7 @@ namespace EawSteamLauncher
             InitializeComponent();
         }
 
-        private void LauncherWindow_Loaded(object sender, RoutedEventArgs e)
+        private void MainLauncherWindow_Loaded(object sender, RoutedEventArgs e)
         {
             Launcher.Initialize();
         }
