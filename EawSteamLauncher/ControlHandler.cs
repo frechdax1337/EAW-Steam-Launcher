@@ -4,7 +4,7 @@ namespace EawSteamLauncher
 {
     class ControlHandler
     {
-        readonly static LauncherWindow launcherWindow = (LauncherWindow)Application.Current.MainWindow;
+        static readonly LauncherWindow launcherWindow = (LauncherWindow)Application.Current.MainWindow;
 
         public static void UpdateListBoxMod()
         {
