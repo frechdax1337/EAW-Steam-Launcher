@@ -61,11 +61,11 @@ namespace EawSteamLauncher
             
             if (modToLaunchWith.IsWorkshopMod)
             {
-                gameProcess.StartInfo.Arguments = "LANGUAGE=ENGLISH" + $"STEAMMOD={modToLaunchWith.ModName}";
+                gameProcess.StartInfo.Arguments = "LANGUAGE=ENGLISH " + $"STEAMMOD={modToLaunchWith.ModName}";
             }
             else
             {
-                gameProcess.StartInfo.Arguments = "MODPATH=Mods/" + $"MODPATH=Mods/{modToLaunchWith.ModName}";
+                gameProcess.StartInfo.Arguments = "LANGUAGE=ENGLISH " + $"MODPATH=Mods/{modToLaunchWith.ModName}";
             }
 
             gameProcess.Start();
