@@ -17,6 +17,7 @@ namespace EawSteamLauncher
         {
             Launcher.Initialize();
             ModHandler.UpdateMods();
+            ControlHandler.UpdateListBoxMod();
         }
     }
 }

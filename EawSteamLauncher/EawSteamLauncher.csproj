@@ -71,6 +71,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ControlHandler.cs" />
     <Compile Include="Launcher.cs" />
     <Compile Include="ModHandler.cs" />
     <Compile Include="PathHandler.cs" />
