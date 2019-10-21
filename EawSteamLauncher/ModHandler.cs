@@ -17,6 +17,14 @@ namespace EawSteamLauncher
             public string ModWorkshopID { get; set; }
         }
 
+        public static Mod[] CurrentMods { get; private set; }
+
+        public static void UpdateMods()
+        
+        {
+            CurrentMods = GetMods();
+        }
+
         public static Mod[] GetMods()
         {
             List<Mod> modList = new List<Mod>();
