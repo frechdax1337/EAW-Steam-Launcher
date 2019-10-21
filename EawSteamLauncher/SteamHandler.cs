@@ -97,7 +97,7 @@ namespace EawSteamLauncher
                         }
                     }
 
-                    if (languageList != null) return languageList.ToArray();
+                    return languageList.ToArray();
                 }
 
                 return null;
