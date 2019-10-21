@@ -24,7 +24,7 @@ namespace EawSteamLauncher
             }
             finally
             {
-                if (dialog != null) dialog.Dispose();
+                dialog.Dispose();
             }
         }
 
