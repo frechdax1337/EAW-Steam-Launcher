@@ -14,7 +14,7 @@ namespace EawSteamLauncher
 
             public string ModPath { get; set; }
 
-            public string ModWorkshopID { get; set; }
+            public string ModWorkshopId { get; set; }
         }
 
         public static Mod[] CurrentMods { get; private set; }
@@ -45,7 +45,7 @@ namespace EawSteamLauncher
 
                 foreach (string x in directories)
                 {
-                    modList.Add(new Mod() { ModPath = x, ModName = Path.GetFileName(x), ModWorkshopID = Path.GetFileName(x), IsWorkshopMod = true });
+                    modList.Add(new Mod() { ModPath = x, ModName = Path.GetFileName(x), ModWorkshopId = Path.GetFileName(x), IsWorkshopMod = true });
                 }
             }
 
