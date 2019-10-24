@@ -27,7 +27,7 @@ namespace EawSteamLauncher
         {
             if (ListMod.SelectedIndex != -1 && ComboLanguage.SelectedIndex != -1)
             {
-                Launcher.Launch(ModHandler.CurrentMods[ListMod.SelectedIndex]);
+                Launcher.Launch(ModHandler.CurrentMods[ListMod.SelectedIndex], ComboLanguage.SelectedItem.ToString());
             }
         }
     }
