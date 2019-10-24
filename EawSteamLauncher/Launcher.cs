@@ -40,7 +40,7 @@ namespace EawSteamLauncher
             MessageHandler.ShowErrorMessage("Steam is not installed on this computer.");
         }
 
-        public static void Launch(ModHandler.Mod modToLaunchWith)
+        public static void Launch(ModHandler.Mod modToLaunchWith, string language)
         {
             if (!SteamHandler.IsSteamRunning())
             {
@@ -64,11 +64,11 @@ namespace EawSteamLauncher
 
             if (modToLaunchWith.IsWorkshopMod)
             {
-                gameProcess.StartInfo.Arguments = "LANGUAGE=ENGLISH " + $"STEAMMOD={modToLaunchWith.ModName}";
+                gameProcess.StartInfo.Arguments = $"LANGUAGE={language} " + $"STEAMMOD={modToLaunchWith.ModName}";
             }
             else
             {
-                gameProcess.StartInfo.Arguments = "LANGUAGE=ENGLISH " + $"MODPATH=Mods/{modToLaunchWith.ModName}";
+                gameProcess.StartInfo.Arguments = $"LANGUAGE={language} " + $"MODPATH=Mods/{modToLaunchWith.ModName}";
             }
 
             gameProcess.Start();
